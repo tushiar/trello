@@ -1,0 +1,42 @@
+.card-container {
+  padding: 10px;
+  padding: 10px;
+  border: solid;
+  border-radius: 6px;
+  border-color: #dfdfdf;
+  background: #dfdfdf;
+  margin: 10px;
+}
+.card-body{
+    min-height: 120px;
+}
+.card-title {
+  font-size: 25px;
+  text-align: center;
+}
+
+.text-input {
+  width: 89%;
+  font-size: 19px;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.input-container {
+  margin: 10px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+.btn-delete {
+  background-color: transparent;
+  font-size: 18px;
+  border-radius: 7px;
+  padding: 3px 18px;
+}
+.btn-add-item {
+  color: rgb(2 39 94 / 88%);
+}

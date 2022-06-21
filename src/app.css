@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.app {
+  background-color: rgb(2 39 94 / 88%);
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+}
+
+.plus-container {
+  color: #71b1eb !important;
+  padding: 10px;
+  font-size: 40px;
+}
+
+.plus-container {
+  color: rgb(2 39 94 / 88%);
+}

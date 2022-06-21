@@ -1,0 +1,28 @@
+.value-card{
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #ffffff;
+    margin: 10px;
+
+}
+
+.text-input {
+    width: 100%;
+    font-size: 19px;
+    background: none;
+    border: none;
+    outline: none;
+  }
+
+  .edit{
+      color: rgb(2 39 94 / 88%);
+
+  }
+  .delete{
+      color: red;
+  }
+  .text-display{
+      min-width:56%
+  }

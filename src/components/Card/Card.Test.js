@@ -1,0 +1,56 @@
+import Card from "./Card";
+import store from "./store";
+import { Provider } from "react-redux";
+import { cleanup, fireEvent, screen, render } from "@testing-library/react";
+import React from "react";
+import reducer from "./reducers/cardReducers";
+import { REMOVE_CARD } from "./constants";
+import Home from "../../Home";
+
+afterEach(cleanup);
+
+it("Card renders the app without crashing", function () {
+  render(
+    <Provider store={store}>
+      <Home>
+        <Card />
+      </Home>
+    </Provider>
+  );
+});
+
+it("should delete a card", function () {
+  const output = {
+    cards: [
+      {
+        id: 1,
+        title: "Change Title",
+        items: [{ id: 1, value: "This is a new card" }],
+      },
+    ],
+  };
+  render(
+    <Provider store={store}>
+      <Home />
+    </Provider>
+  );
+  fireEvent.click(screen.getAllByLabelText("Delete"));
+  const prevState = {
+    cards: [
+      {
+        id: 1,
+        title: "Change Title",
+        items: [{ id: 1, value: "This is a new card" }],
+      },
+      {
+        id: 2,
+        title: "Change Title",
+        items: [{ id: 1, value: "This is a new card" }],
+      },
+    ],
+  };
+
+  expect(reducer(prevState, { type: REMOVE_CARD, payload: { id: 2 } })).toEqual(
+    output
+  );
+});
